@@ -1,0 +1,382 @@
+@import url('https://fonts.google.com/specimen/Space+Grotesk');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif 'Space Grotesk';
+    font-weight: 500;
+}
+
+body {
+    background: no-repeat left url(./images/bg-main-desktop.png);
+    background-size: 30% 200%;
+    height: 100vh;
+    position: relative;
+}
+
+.main_cont {
+    display: flex;
+    flex-direction: row;
+    gap: 15rem;
+    height: 100vh;
+}
+
+span {
+    font-size: 16px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.front_card {
+    position: relative;
+    left: 60px;
+    top: 50px;
+}
+
+.box {
+    height: 250px;
+    width: 450px;
+    position: relative;
+    left: 60px;
+    bottom: 210px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 3rem;
+}
+
+.head {
+    display: flex;
+}
+
+.head_img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.big{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.small {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%; 
+    border: 1px solid white;
+}
+
+.center p   {
+    font-size: 24px;
+    font-weight: 300;
+    color: white;
+    letter-spacing: 5px;
+}
+
+.btm_card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.back_card {
+    position: relative;
+    left: 130px;
+    bottom: 180px;
+}
+
+.right_cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right_box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.name_box,
+.num_box {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    
+}
+
+#month,
+#year,
+#code {
+    width: 70px;
+}
+
+input {
+    padding: 1rem;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.221);
+}
+
+input::placeholder {
+    padding: 1rem;
+}
+
+button {
+    width: 350px;
+    background-color: black;
+    height: 35px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+.btn {
+    color: white;
+}
+
+.btm_head {
+    display: flex;
+    gap: 1rem;
+}
+
+.btm_left {
+    display: flex;
+    flex-direction: column;
+}
+
+.btm_digits {
+    display: flex;
+    flex-direction: row; 
+    gap: 1rem;
+}
+
+.btm_month,
+.btm_year {
+    width: 90px;
+}
+
+.btm_right {
+    display: flex;
+    flex-direction: column;
+}
+
+#demo,
+#demo1,
+#demo2,
+#demo3,
+#demo4 {
+    display: none;
+}
+
+#code {
+    width: 140px;
+}
+
+.complete_box,
+.thanks_box,
+.btm_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name_box img {
+    width: 100px;
+    height: 100px;
+}
+
+.attribution {
+    font-size: 20px;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+button:hover, 
+button:active {
+    color: blueviolet;
+    background-color: black;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+   body {
+        background: no-repeat left url(./images/bg-main-mobile.png);
+        background-size: 40% 200%;
+        height: 120vh;
+    } 
+
+    .main_cont {
+        height: 120vh;
+    }
+
+   span {
+        font-size: 16px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+    }
+
+    .front_card {
+        position: relative;
+        left: 80px;
+        top: 50px;
+    }
+    
+    .box {
+        height: 250px;
+        width: 450px;
+        position: relative;
+        left: 80px;
+        bottom: 210px;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        gap: 3rem;
+    }
+
+    .attribution {
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+        margin-left: 10rem;
+    }
+}
+
+
+
+@media screen and (max-width: 945px) {
+    body {
+        background: no-repeat top url(./images/bg-main-mobile.png);
+        background-size: 370% 50%;
+        height: 150vh;
+        width: 100vh;
+    } 
+
+    .main_cont {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        height: 240vh;
+        width: 100vh;
+        justify-content: center;
+        margin-left: 2rem;
+    }
+
+    span {
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+    }
+    
+    .front_card {
+        position: relative;
+        left: -20px;
+        top: 50px;
+    }
+    
+    .box {
+        height: 250px;
+        width: 450px;
+        position: relative;
+        left: -20px;
+    }
+    
+    .head {
+        display: flex;
+    }
+    
+    .back_card {
+        position: relative;
+        left: 30px;
+    }
+    
+    button {
+        width: 352px;
+        background-color: black;
+        height: 35px;
+        color: white;
+        border-radius: 5px;
+    }
+    
+    .attribution {
+        font-size: 20px;
+        margin-left: 0rem;
+    }
+    
+}
+
+@media screen and (max-width: 312px) {
+    body {
+        background: no-repeat top url(./images/bg-main-mobile.png);
+        background-size: 371% 40%;
+        height: 200vh;
+    } 
+
+    .main_cont {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        height: 200vh;
+        width: 100vh;
+        justify-content: center;
+        margin-left: 0rem;
+    }
+
+    .front_card {
+        position: relative;
+        left: -50px;
+        top: 50px;
+    }
+    
+    .box {
+        height: 250px;
+        width: 450px;
+        position: relative;
+        left: -50px;
+    }
+
+    .back_card {
+        position: relative;
+        left: 10px;
+    }
+}    
+
+/* Landscape */
+
+@media screen and (min-width: 425px ) and (max-width: 945px) and (min-aspect-ratio: 2/5) {
+    body {
+        background-size: 370% 20%;
+        height: 350vh;  
+    }
+
+    .main_cont {
+        height: 370vh;
+        width: 100vh;
+        margin-left: 7rem;
+    }
+
+    .attribution {
+        font-size: 20px;
+        margin-left: 7rem;
+    }
+
+}

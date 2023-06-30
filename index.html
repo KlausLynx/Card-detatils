@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <div class="main_cont" id="main">
+    <div class="cards">
+      <div class="front_card">
+        <img src="./images/bg-card-front.png" alt="">
+      </div>
+      <div class="box">
+        <div class="head">
+          <div class="head_img">
+            <div class="big"></div>
+            <div class="small"></div>
+          </div>
+        </div>
+      <div class="center">
+        <p>0000 &nbsp;0000 &nbsp;0000 &nbsp;0000</p>
+      </div>
+      <div class="btm_card">
+        <div class="card_name">
+          <p>Jane Appleseed</p>
+        </div>
+        <div class="card_digit">
+          <p>00/00</p>
+        </div>
+      </div>
+      </div>
+      <div class="back_card">
+        <img src="./images/bg-card-back.png" alt="">
+      </div>
+    </div>
+    <div class="right_cont">
+      <div class="right_box">
+        <div class="name_box">
+          <span>Cardholder Name</span>
+          <input type="text" placeholder="e.g. Jane Appleseed" id="name" onkeypress="validateName()" >
+          <p id="demo">Name can't be empty</p> 
+        </div>
+        <div class="num_box">
+          <span>Card Number</span>
+          <input type="text" placeholder="e.g. 1234 5678 9123 0000" id="number" onkeypress="validateNumber()">
+          <p id="demo1">Number can't be empty</p>
+        </div>
+        <div class="bottom">
+          <div class="btm_head">
+            <div class="btm_left">
+              <span>Exp. Date (MM/YY)</span>
+              <div class="btm_digits">
+                <div class="btm_month">
+                  <input type="text" placeholder="MM" id="month"  onkeyup="validateMonth()">
+                  <p id="demo2">Month can't be empty</p>
+                </div>
+                <div class="btm_year">
+                  <input type="number" placeholder="YY" id="year" onkeyup="validateYear()">
+                  <p id="demo3">Year can't be empty</p>
+                </div>
+              </div>
+            </div>
+            <div class="btm_right">
+              <span>CVC</span>
+              <div class="btm_right_digits">
+                <input type="text" placeholder="e.g. 123" id="code" onkeyup="validateCode()">
+                <p id="demo4">Code can't be empty</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn" id="confirm" onclick= "return validateCard()">Confirm</button>
+      </div>
+    </div>
+  </div>
+  <div class="main_cont" id="Thanks">
+    <div class="cards">
+      <div class="front_card">
+        <img src="./images/bg-card-front.png" alt="">
+      </div>
+      <div class="box">
+        <div class="head">
+          <div class="head_img">
+            <div class="big"></div>
+            <div class="small"></div>
+          </div>
+        </div>
+      <div class="center">
+        <p>9591 &nbsp;6489 &nbsp;6389&nbsp;1011</p>
+      </div>
+      <div class="btm_card">
+        <div class="card_name">
+          <p>FElICIA LEIRE</p>
+        </div>
+        <div class="card_digit">
+          <p>09/26</p>
+        </div>
+      </div>
+      </div>
+      <div class="back_card">
+        <img src="./images/bg-card-back.png" alt="">
+      </div>
+    </div>
+    <div class="right_cont">
+      <div class="right_box">
+        <div class="complete_box">
+          <img src="./images/icon-complete.svg" alt="">
+        </div>
+        <div class="thanks_box">
+          <h1>THANK YOU!</h1>
+        </div>
+            <div class="btm_right">
+              <p>We've added your card details</p>
+            </div>
+        <button class="btn" id="cont"><a href="https://mailchi.mp/347456bcdb67/the-year">Continue</a></button>
+      </div>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by Klaus_Lynx.
+  </div>
+</body>
+</html>
