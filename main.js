@@ -52,12 +52,16 @@ function validateMonth() {
         monthNotice.style.color = 'red';
         return false
     }
-    if(!cardMonth.match(/^[\d]+$/)){
-        console.log('get out')
+      if(!cardMonth.match(/^[\d]+$/)){
+        monthNotice.style.display = 'flex';
+        monthNotice.textContent = 'Invalid month';
+        monthNotice.style.color = 'red';
         return false
     }
     if(cardMonth > 12){
-        console.log('get lost')
+        monthNotice.style.display = 'flex';
+        monthNotice.textContent = 'Invalid month';
+        monthNotice.style.color = 'red';
         return false
     }
     monthNotice.style.display = 'none';
